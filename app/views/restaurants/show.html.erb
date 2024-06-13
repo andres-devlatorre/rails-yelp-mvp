@@ -2,3 +2,9 @@
 <h3><%= @restaurant.category %></h3>
 <h4><%= @restaurant.address %></h4>
 <h4><%= @restaurant.phone_number %></h4>
+
+
+<%= link_to 'Delete',
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
